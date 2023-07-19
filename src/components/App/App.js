@@ -1,13 +1,16 @@
 import React from "react";
-
 import Editor from "../Editor/Editor";
 import Preview from "../Preview/Preview";
+
+import { Marked, marked } from "marked";
+
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      currentMarkDown: "",
+      parsedMarkDown: "",
+      defaultText: " # Header",
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -15,15 +18,24 @@ class App extends React.Component {
 
   handleChange(e) {
     this.setState({
-      currentMarkDown: e.target.value,
+      parsedMarkDown: marked.parse(e.target.value),
+    });
+  }
+
+  componentDidMount() {
+    this.setState({
+      parsedMarkDown: marked.parse(this.state.defaultText),
     });
   }
 
   render() {
     return (
       <>
-        <Editor onChange={this.handleChange} />
-        <Preview markDown={this.state.currentMarkDown} />
+        <Editor
+          onChange={this.handleChange}
+          defaultText={this.state.defaultText}
+        />
+        <Preview markDown={this.state.parsedMarkDown} />
       </>
     );
   }

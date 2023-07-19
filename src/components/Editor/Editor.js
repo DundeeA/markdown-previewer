@@ -7,7 +7,9 @@ function Editor(props) {
       rows={60}
       cols={80}
       onChange={props.onChange}
-    ></textarea>
+      defaultValue={props.defaultText}
+    >
+    </textarea>
   );
 }
 
