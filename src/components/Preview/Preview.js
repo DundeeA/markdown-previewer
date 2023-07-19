@@ -1,15 +1,7 @@
 import React from "react";
 
-
 const Preview = (props) => {
-    return(
-    <div id="preview">
-
-     This is the previewer!
-
-    </div>
-    )
-}
-
+  return <div id="preview">{props.markDown}</div>;
+};
 
 export default Preview;
