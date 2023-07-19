@@ -1,7 +1,11 @@
 body {
 background-color: azure;
   margin: 0;
-
-
 }
 
+main{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+
+}
