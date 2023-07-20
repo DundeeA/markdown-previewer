@@ -4,17 +4,20 @@ import Preview from "../Preview/Preview";
 
 import { Marked, marked } from "marked";
 
+
+marked.use({breaks: true });
+
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
       parsedMarkDown: "",
-      defaultText: " # Header",
+      defaultText: " # Welcome \n ## to the markdown previewer! <br> \n created by [dundee]('https://www.github.com/DundeeA') `<>Heres some inline code</>` \n and a larger code block  \n``` \n function myCode(){ \n  return true; \n} \n ``` \n 1. you  \n 2. can \n 3. make \n 4. list \n > 'and block quotes!' \n \n**Bold text** \n ![cat pic](https://m.media-amazon.com/images/I/81hueZjyFcL.png 'cat pic') ",
     };
 
     this.handleChange = this.handleChange.bind(this);
-  }
+  } 
 
   handleChange(e) {
     this.setState({
