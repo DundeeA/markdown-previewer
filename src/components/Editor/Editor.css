@@ -1,0 +1,13 @@
+#editor {
+  width: 50% !important;
+  height: 100% !important;
+  font-size: 2vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: antiquewhite;
+  z-index: 1;
+
+  resize: none;
+}
+

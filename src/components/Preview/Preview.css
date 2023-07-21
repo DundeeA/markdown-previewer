@@ -1,8 +1,26 @@
+
+#preview{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-size: 2vh;
+
+    border-left: 4px solid white;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+}
+
+
+
+
+
+/*Markdown styles*/
+
 pre{
     background-color: rgb(158, 158, 158);
     border: 1px solid black;
 }
-
 
 code{
     background-color: rgb(158, 158, 158);
