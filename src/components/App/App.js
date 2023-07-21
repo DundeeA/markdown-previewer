@@ -3,7 +3,7 @@ import Editor from "../Editor/Editor";
 import Preview from "../Preview/Preview";
 import './App.css'
 
-import { Marked, marked } from "marked";
+import { marked } from "marked";
 
 
 marked.use({breaks: true });
