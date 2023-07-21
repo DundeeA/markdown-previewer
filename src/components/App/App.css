@@ -11,7 +11,6 @@
     margin: 0;
 } 
 
-
 #app > h1{
     color: yellow;
 }
@@ -20,3 +19,23 @@
     color: green;
 }
 
+
+@media screen and (max-width: 1200px) {
+    .markdown{
+        flex-direction: column;
+        width: 90vw;
+        height: 90vh;
+    } 
+
+    #preview{
+        width: 100%;
+        border-top: .4vh solid rgb(0, 0, 0);
+        padding: 0;
+    }
+
+    #editor{
+    width: 100%;
+    }
+
+
+}
